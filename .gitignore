@@ -1,0 +1,25 @@
+# 원본·가공 데이터: 이용 조건 확인 전 외부 업로드·재배포 금지 (REQUIREMENTS §15)
+data/raw/
+data/interim/
+data/processed/
+
+# 영상 등 개인정보가 포함될 수 있는 원본
+*.avi
+*.mp4
+
+# 모델 산출물
+models/*
+!models/.gitkeep
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# 데이터에서 계산된 결과물(점수·나이 등 Subject 단위 값 포함): 로컬에서 생성, 저장소에 포함하지 않음 (REQUIREMENTS §15)
+reports/
+docs/figures/
+docs/inventory_report.md
+docs/label_eda_report.md
